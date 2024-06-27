@@ -1,7 +1,5 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 
-export default class Highlights extends PureComponent {
-	render() {
-		return <div></div>;
-	}
+export default function Highlights() {
+	return <div>High</div>;
 }

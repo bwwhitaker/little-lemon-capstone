@@ -1,0 +1,31 @@
+/* Header component styles */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	color: black;
+	top: 0;
+	position: absolute;
+	width: 80vw;
+	z-index: 1000;
+	padding-top: 10px;
+}
+
+/* Media query: hide desktop navigation on smaller screens */
+@media (max-width: 1000px) {
+	.desktop-nav {
+		display: none;
+	}
+}
+
+.mobile-nav {
+	display: none;
+}
+
+/* Media query: reveal the component if the viewport is under 750px */
+@media (max-width: 1000px) {
+	.mobile-nav {
+		display: flex; /* or 'flex', 'inline-block', etc. */
+	}
+}

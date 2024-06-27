@@ -1,0 +1,45 @@
+/* Ensure the navbar is positioned correctly within the header */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	position: relative;
+	background-color: #fff;
+}
+
+.hamburger img {
+	max-width: 30px;
+	cursor: pointer;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+	position: fixed;
+	right: 1rem;
+	top: 3rem; /* Position below the hamburger */
+	background-color: #fff;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+	display: flex;
+	flex-direction: column;
+	border-radius: 4px;
+	padding: 1rem;
+}
+
+.dropdown-menu li a {
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	color: #333;
+	display: inline-flex;
+}
+
+.dropdown-menu a:hover {
+	color: gray;
+}
+
+.no-bullets {
+	list-style-type: none; /* Removes bullets */
+	padding-left: 0; /* Removes default padding */
+	margin: 0; /* Optional: Adjusts margin */
+}
