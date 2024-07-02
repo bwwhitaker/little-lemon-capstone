@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import logo from '../icons_assets/Logo.svg';
-import { Link } from 'react-router-dom';
 import hamburger from '../icons_assets/🦆 icon _hamburger menu.svg';
 import { routes } from './Routes';
 import './MobileNav.css';

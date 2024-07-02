@@ -1,0 +1,602 @@
+.hero-section {
+	background-color: #495e57;
+	max-height: 400px;
+}
+
+.hero-container {
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	top: 4rem;
+	padding: 2rem;
+}
+
+.hero-detail {
+	color: whitesmoke;
+}
+
+.hero-detail h1 {
+	font-size: 64px;
+	color: #f4ce14;
+	font-family: 'Markazi Text', serif;
+	letter-spacing: 2px;
+	margin-top: -2rem;
+	margin-bottom: 0.1rem;
+}
+
+.hero-detail h2 {
+	font-size: 32px;
+	font-weight: 500;
+	margin-top: 0.1rem;
+	margin-bottom: 0.1rem;
+}
+
+.hero-detail p {
+	font-size: 18px;
+	padding: 1rem 0.5rem 1rem 0;
+	max-width: 300px;
+}
+
+.hero-detail button {
+	background-color: #f4ce14;
+	font-size: 18px;
+	border-radius: 10px;
+	border-width: 0px;
+	padding: 0.5rem 1rem;
+	font-weight: 600;
+	transition: 0.1s ease-in-out;
+	outline-color: #495e57;
+}
+
+.hero-img img {
+	width: 400px;
+	height: 400px;
+	border-radius: 10px;
+	object-fit: cover;
+	top: 2rem;
+}
+
+.button-hover:hover {
+	background-color: #495e57;
+	color: #f4ce14;
+	outline: 2px solid #f4ce14;
+}
+
+@media only screen and (max-width: 1000px) {
+	.hero-detail h1 {
+		font-size: 48px;
+	}
+
+	.hero-detail h2 {
+		font-size: 24px;
+	}
+
+	.hero-detail p {
+		font-size: 16px;
+	}
+
+	.hero-detail button {
+		font-size: 16px;
+	}
+
+	.hero-img img {
+		width: 300px;
+		height: 300px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.hero-container {
+		top: 0rem;
+	}
+
+	.hero-detail h1 {
+		font-size: 32px;
+		margin-top: 1rem;
+	}
+
+	.hero-detail h2 {
+		font-size: 18px;
+	}
+
+	.hero-detail p {
+		font-size: 14px;
+	}
+
+	.hero-detail button {
+		font-size: 14px;
+	}
+
+	.hero-img img {
+		width: 200px;
+		height: 200px;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.hero-img {
+		display: none;
+	}
+}
+
+.highlights-section {
+	margin-top: 10rem;
+	margin-bottom: 10rem;
+}
+
+.highlights-container {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.highlights-banner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 4rem;
+	padding: 0 2rem;
+}
+
+.highlights-banner h3 {
+	font-size: 48px;
+	font-weight: 900;
+}
+
+.highlights-banner button {
+	font-size: 18px;
+	font-weight: 600;
+	background-color: #f4ce14;
+	padding: 0.5rem 1.5rem;
+	border-radius: 10px;
+	transition: 0.1s ease-in-out;
+}
+
+.highlights-banner button:hover {
+	background-color: white;
+	outline: 2px solid #495e57;
+	color: #495e57;
+}
+
+.highlights-cards {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 3rem;
+	padding: 0 2rem;
+}
+
+.highlight-items {
+	max-width: 350px;
+	background-color: #edefee;
+	border-radius: 10px 10px 0 0;
+}
+
+.item-wrapper {
+	padding: 2rem;
+}
+
+.highlight-items img {
+	width: 350px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 10px 10px 0 0;
+}
+
+.title-price {
+	font-size: 18px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.item-title {
+	font-weight: 600px;
+}
+
+.item-price {
+	color: #ee9972;
+}
+
+.item-wrapper p {
+	color: #333333;
+	margin: 1.5rem 0;
+	min-height: 100px;
+}
+
+.item-wrapper button {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-weight: 600;
+}
+
+@media only screen and (max-width: 1200px) {
+	.highlights-cards {
+		gap: 2rem;
+	}
+
+	.highlight-items {
+		max-width: 300px;
+	}
+
+	.highlight-items img {
+		width: 300px;
+		height: 250px;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.highlights-section {
+		margin-bottom: 10rem;
+	}
+
+	.highlights-cards {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+
+	.highlight-items {
+		max-width: 100%;
+	}
+
+	.highlight-items img {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 859px) {
+	.highlights-section {
+		margin-top: 6rem;
+		margin-bottom: 10rem;
+	}
+
+	.highlights-banner h3 {
+		font-size: 36px;
+	}
+
+	.highlights-banner button {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.highlights-section {
+		margin-top: 6rem;
+		margin-bottom: 10rem;
+	}
+
+	.highlights-banner h3 {
+		font-size: 28px;
+	}
+
+	.highlights-banner button {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.highlights-section {
+		margin-bottom: 5rem;
+	}
+
+	.highlights-banner h3 {
+		font-size: 22px;
+		padding-right: 1rem;
+	}
+
+	.highlights-banner button {
+		font-size: 14px;
+		white-space: nowrap;
+	}
+
+	.item-title {
+		font-size: 16px;
+	}
+
+	.item-price {
+		font-size: 16px;
+	}
+
+	.item-wrapper p {
+		font-size: 14px;
+		margin: 1.5rem 0 1rem;
+		min-height: 80px;
+	}
+}
+
+.testimonials-section {
+	margin-bottom: 10rem;
+	text-align: center;
+}
+
+.testimonials-container {
+	max-width: 1200px;
+	padding: 0 2rem;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.testimonials-headers {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.testimonials-section h3 {
+	font-size: 48px;
+	font-weight: 900;
+	color: #495e57;
+	margin: 0.5rem 0;
+}
+
+.testimonials-section h4 {
+	font-size: 28px;
+	font-weight: 900;
+	color: #ee9972;
+	margin: 0.5rem 0;
+}
+
+.reviews {
+	margin: 5rem 0;
+	display: flex;
+	gap: 3rem;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.review {
+	background-color: #495e57;
+	width: 350px;
+	border-radius: 10px;
+}
+
+.reviews-wrapper {
+	padding: 1rem;
+	color: #edefee;
+}
+
+.client {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: top;
+	display: block;
+	margin: 0 auto;
+}
+
+.reviews-wrapper h5 {
+	font-size: 24px;
+	font-weight: 600;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.stars {
+	display: flex;
+	font-size: 18px;
+	align-items: center;
+	gap: 2px;
+	justify-content: center;
+}
+
+.star {
+	width: 15px;
+}
+
+.reviews-wrapper p {
+	font-size: 18px;
+	margin: 1rem 0;
+	line-height: 1.5rem;
+}
+
+.quote {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+@media only screen and (max-width: 711px) {
+	.review {
+		width: 100%;
+	}
+
+	.reviews-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 0.5rem;
+	}
+
+	.client {
+		width: 70px;
+		height: 70px;
+	}
+
+	.client-detail {
+		max-width: 70%;
+	}
+
+	.reviews-wrapper h5 {
+		text-align: left;
+		font-size: 18px;
+	}
+
+	.stars {
+		justify-content: flex-start;
+		font-size: 16px;
+	}
+
+	.star {
+		width: 12px;
+	}
+
+	.reviews-wrapper p {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.testimonial-section {
+		margin-bottom: 5rem;
+	}
+
+	.testimonials-headers h2 {
+		font-size: 28px;
+	}
+
+	.testimonials-headers h4 {
+		font-size: 20px;
+	}
+
+	.client {
+		margin-top: 1.5rem;
+		width: 50px;
+		height: 50px;
+		align-self: flex-start;
+	}
+}
+
+.about-us {
+	margin-bottom: 10rem;
+}
+
+.about-us-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 2rem;
+}
+
+.about-us-detail {
+	max-width: 500px;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.about-us-detail h2 {
+	font-size: 40px;
+	font-weight: 900;
+	color: #495e57;
+	margin-bottom: 2rem;
+}
+
+.about-us-detail p {
+	line-height: 2.2rem;
+	letter-spacing: 0.2px;
+}
+
+.about-us-img {
+	position: relative;
+}
+
+.about-us-img img {
+	width: 300px;
+	height: 400px;
+	border-radius: 10px;
+	object-fit: cover;
+	object-position: 70%;
+	display: block;
+}
+
+.about-us-img :nth-child(1) {
+	position: absolute;
+	right: 10rem;
+	z-index: 1;
+}
+
+.about-us-img :nth-child(2) {
+	position: absolute;
+	right: 0;
+	top: 16rem;
+}
+
+@media only screen and (max-width: 1100px) {
+	.about-us-img img {
+		width: 200px;
+		height: 300px;
+	}
+
+	.about-us-img :nth-child(1) {
+		right: 10rem;
+	}
+
+	.about-us-img :nth-child(2) {
+		right: 0;
+		top: 10rem;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	.about-us-detail {
+		max-width: 400px;
+	}
+
+	.about-us-detail h2 {
+		font-size: 32px;
+	}
+
+	.about-us-detail p {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	.about-us {
+		margin-bottom: 10rem;
+	}
+
+	.about-us-container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 3rem;
+	}
+
+	.about-us-detail {
+		text-align: center;
+		max-width: 100%;
+	}
+
+	.about-us-img {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.about-us-img :nth-child(1) {
+		position: static;
+		right: 0;
+	}
+
+	.about-us-img :nth-child(2) {
+		position: static;
+		top: 0;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.about-us-detail h2 {
+		font-size: 28px;
+	}
+
+	.about-us-detail p {
+		font-size: 16px;
+		line-height: 1.8rem;
+		letter-spacing: 0;
+	}
+
+	.about-us-img {
+		gap: 1rem;
+	}
+
+	.about-us-img img {
+		width: 150px;
+		height: 200px;
+	}
+}

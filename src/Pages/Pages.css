@@ -1,0 +1,35 @@
+.temp-page {
+	min-height: 65vh;
+	background-image: url('../icons_assets/restaurant.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.no-page {
+	min-height: 65vh;
+	background-image: url('../icons_assets/restaurant chef B.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.temp-page h1 {
+	background-color: #495e57;
+	color: #edefee;
+	padding: 1rem 2rem;
+	font-weight: 900;
+	border-radius: 10px;
+}
+.temp-page h1 {
+	background-color: #495e57;
+	padding: 1rem 2rem;
+	font-weight: 900;
+	color: #edefee;
+	border-radius: 10px;
+}

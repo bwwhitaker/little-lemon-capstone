@@ -11,7 +11,7 @@ export default function Footer() {
 				</div>
 				<div className='footer-wrapper'>
 					<div className='about'>
-						<h4>About us</h4>
+						<h4>ABOUT US</h4>
 						<ul>
 							<a href='/'>
 								<li>Our Company</li>
@@ -34,7 +34,7 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div className='contact-info'>
-						<h4>Contacts</h4>
+						<h4>CONTACT INFO</h4>
 						<ul>
 							<li>
 								<a href='tel:123-456-7890'>+1(123)456-7890</a>
@@ -47,8 +47,8 @@ export default function Footer() {
 							</li>
 						</ul>
 					</div>
-					<div className='availibity'>
-						<h4>Availitbity</h4>
+					<div className='hours'>
+						<h4>HOURS</h4>
 						<ul>
 							<li>Tues-Thurs: 12pm-10pm</li>
 							<li>Fri-Sun: 12pm-10pm</li>
@@ -56,7 +56,7 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div className='social-media'>
-						<h4>Socials</h4>
+						<h4>SOCIAL MEDIA</h4>
 						<ul>
 							<a href='https://www.instagram.com'>
 								<li>Instagram</li>
