@@ -10,7 +10,6 @@ const generateRandomTime = () => {
 	const minutes = quarterHours[Math.floor(Math.random() * quarterHours.length)];
 	return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
 };
-
 const AvailableTimes = ({ onTimesGenerated }) => {
 	// Use a ref to track the initial mount
 	const hasGeneratedTimes = useRef(false);

@@ -33,3 +33,188 @@
 	color: #edefee;
 	border-radius: 10px;
 }
+
+.reservation-form {
+	margin: 1rem auto;
+	border-radius: 10px;
+	max-width: 900px;
+}
+
+form {
+	max-width: 800px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+form h2 {
+	text-align: center;
+	font-size: 32px;
+	margin: 1rem 0;
+	color: #495e57;
+}
+
+label {
+	font-size: 16px;
+	color: #868887;
+	margin: 0.5rem 0;
+}
+
+textarea {
+	font-size: 16px;
+	font-family: 'Karla', sans-serif;
+	resize: none;
+	padding: 1rem;
+}
+
+input,
+select {
+	border: none;
+	border-bottom: 1px solid black;
+	font-size: 16px;
+}
+
+input:focus,
+select:focus {
+	outline: none;
+}
+
+.num-of-guests {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1rem 0;
+}
+
+.num {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	border-bottom: 1px solid black;
+	font-size: 20px;
+}
+
+.num span {
+	cursor: pointer;
+}
+
+.field-error {
+	color: red;
+	font-size: 14px;
+}
+
+.submitBtn {
+	align-self: center;
+	border-radius: 10px;
+	margin: 1rem 0;
+	padding: 0.5rem 1rem;
+	background-color: #f4ce14;
+	font-size: 18px;
+	font-weight: 600;
+}
+.clearBtn {
+	align-self: center;
+	border-radius: 10px;
+	margin: 1rem 0;
+	padding: 0.5rem 1rem;
+	background-color: #ee9972;
+	font-size: 18px;
+	font-weight: 600;
+}
+.submitBtn[disabled] {
+	background-color: #979292;
+	color: honeydew;
+	cursor: not-allowed;
+}
+
+@media only screen and (max-width: 750px) {
+	.reservation-form {
+		box-shadow: 0 0;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	form {
+		padding: 0 2rem;
+	}
+
+	form h2 {
+		font-size: 28px;
+	}
+
+	.submitBtn {
+		font-size: 16px;
+	}
+}
+
+.confirmation {
+	margin: 1rem auto;
+	max-width: 900px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.confirmation h2 {
+	font-size: 40px;
+	font-weight: 900;
+	color: #495e57;
+	margin-bottom: 2rem;
+}
+
+.confirmation p {
+	line-height: 2.2rem;
+	letter-spacing: 0.2px;
+}
+
+.confirmation button {
+	font-size: 18px;
+	font-weight: 600;
+	background-color: #f4ce14;
+	padding: 0.5rem 1.5rem;
+	border-radius: 10px;
+	transition: 0.1s ease-in-out;
+}
+
+.confirmation button:hover {
+	background-color: white;
+	outline: 2px solid #495e57;
+	color: #495e57;
+}
+
+@media only screen and (max-width: 1000px) {
+	.confirmation h2 {
+		font-size: 30px;
+		margin: 20px;
+	}
+
+	.confirmation p {
+		margin: 20px;
+		line-height: 1.25rem;
+	}
+
+	.confirmation button {
+		margin: 20px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.confirmation h2 {
+		font-size: 20px;
+		margin: 20px;
+		max-width: 80%;
+	}
+
+	.confirmation p {
+		margin: 20px;
+		line-height: 1.25rem;
+		max-width: 80%;
+	}
+
+	.confirmation button {
+		margin: 20px;
+		font-size: 14px;
+		max-width: 80%;
+	}
+}

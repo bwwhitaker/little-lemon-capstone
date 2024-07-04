@@ -25,7 +25,11 @@ export default function Reservations(props) {
 		fullname: '',
 		email: '',
 		phone: '',
-		isTouched: false,
+		isTouchedDate: false,
+		isTouchedTime: false,
+		isTouchedName: false,
+		isTouchedPhone: false,
+		isTouchedEmail: false,
 	});
 
 	// console.log(formData)
@@ -60,7 +64,11 @@ export default function Reservations(props) {
 				fullname: '',
 				email: '',
 				phone: '',
-				isTouched: false,
+				isTouchedDate: false,
+				isTouchedTime: false,
+				isTouchedName: false,
+				isTouchedPhone: false,
+				isTouchedEmail: false,
 			};
 		});
 	}
@@ -76,7 +84,13 @@ export default function Reservations(props) {
 	}
 
 	const getIsFormValid = () => {
-		return formData.date && formData.time && formData.fullname.trim().length > 3 && formData.phone;
+		return (
+			formData.date.trim().length >= 3 &&
+			formData.time.trim().length >= 3 &&
+			formData.fullname.trim().length >= 3 &&
+			formData.phone.trim().length >= 10 &&
+			formData.email.trim().length >= 8
+		);
 	};
 
 	function handleSubmit(e) {
@@ -85,11 +99,13 @@ export default function Reservations(props) {
 		submitForm(e);
 	}
 
+	console.log(formData);
+
 	return (
 		<div className='reservation-form'>
 			<AvailableTimes onTimesGenerated={handleTimesGenerated} />
 			<form onSubmit={handleSubmit}>
-				<h2>Reserve Table</h2>
+				<h2>Reserve a Table</h2>
 				<label htmlFor='date'>
 					Date<sup>*</sup>
 				</label>
@@ -99,10 +115,10 @@ export default function Reservations(props) {
 					id='date'
 					min={today}
 					value={formData.date}
-					onBlur={() => setFormData({ ...formData, isTouched: true })}
+					onBlur={() => setFormData({ ...formData, isTouchedDate: true })}
 					onChange={handleChange}
 				/>
-				{formData.isTouched && formData.date.trim().length < 3 ? (
+				{formData.isTouchedDate && formData.date.trim().length < 3 ? (
 					<div className='field-error'>Select a Date</div>
 				) : null}
 				<br />
@@ -114,21 +130,23 @@ export default function Reservations(props) {
 					id='time'
 					value={formData.time}
 					onChange={handleChange}
-					onBlur={() => setFormData({ ...formData, isTouched: true })}
+					onBlur={() => setFormData({ ...formData, isTouchedTime: true })}
 				>
 					<option value=''>Select a time</option>
 					{availableTime.map((time) => {
 						return <option key={time}>{time}</option>;
 					})}
 				</select>
-				{formData.isTouched && formData.time.trim().length < 3 ? (
-					<div className='field-error'>Select a Date</div>
+				{formData.isTouchedTime && formData.time.trim().length < 3 ? (
+					<div className='field-error'>Select a Time</div>
 				) : null}
 				<div className='num-of-guests'>
 					<label>Number of Guests</label>
 					<div className='num'>
 						<span onClick={() => (numOfGuests < 10 ? setNumOfGuets(numOfGuests + 1) : null)}>+</span>
+
 						<h5>{numOfGuests}</h5>
+
 						<span onClick={() => (numOfGuests > 1 ? setNumOfGuets(numOfGuests - 1) : null)}>-</span>
 					</div>
 				</div>
@@ -150,14 +168,14 @@ export default function Reservations(props) {
 					id='fullname'
 					value={formData.fullname}
 					onChange={handleChange}
-					onBlur={() => setFormData({ ...formData, isTouched: true })}
+					onBlur={() => setFormData({ ...formData, isTouchedName: true })}
 				/>
-				{formData.isTouched && formData.fullname.trim().length < 3 ? (
-					<div className='field-error'>should have atleast 3 characters</div>
+				{formData.isTouchedName && formData.fullname.trim().length < 3 ? (
+					<div className='field-error'>Enter a valid name with at least 3 letters</div>
 				) : null}
 				<br />
 				<label htmlFor='email'>
-					email<sup>*</sup>
+					Email<sup>*</sup>
 				</label>
 				<input
 					type='email'
@@ -165,10 +183,10 @@ export default function Reservations(props) {
 					id='email'
 					value={formData.email}
 					onChange={handleChange}
-					onBlur={() => setFormData({ ...formData, isTouched: true })}
+					onBlur={() => setFormData({ ...formData, isTouchedEmail: true })}
 				/>
-				{formData.isTouched && formData.email.trim().length < 8 ? (
-					<div className='field-error'>enter a valid email</div>
+				{formData.isTouchedEmail && formData.email.trim().length < 8 ? (
+					<div className='field-error'>Enter a valid email</div>
 				) : null}
 				<br />
 				<label htmlFor='phone'>
@@ -181,13 +199,16 @@ export default function Reservations(props) {
 					value={formData.phone}
 					onChange={handleChange}
 					pattern='[0-9]{10,11}'
-					onBlur={() => setFormData({ ...formData, isTouched: true })}
+					onBlur={() => setFormData({ ...formData, isTouchedPhone: true })}
 				/>
-				{formData.isTouched && formData.phone.trim().length < 10 ? (
-					<div className='field-error'>enter a valid number</div>
+				{formData.isTouchedPhone && formData.phone.trim().length < 10 ? (
+					<div className='field-error'>Enter a valid phone number</div>
 				) : null}
 				<button aria-label='On Click' type='submit' className='submitBtn' disabled={!getIsFormValid()}>
 					Confirm Booking
+				</button>
+				<button aria-label='On Click' type='reset' className='clearBtn' onClick={clearForm}>
+					Clear Form
 				</button>
 			</form>
 		</div>
