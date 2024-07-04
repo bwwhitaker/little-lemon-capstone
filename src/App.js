@@ -9,6 +9,7 @@ import Login from './Pages/LogIn';
 import Menu from './Pages/Menu';
 import NoPage from './Pages/NoPage';
 import { Routes, Route } from 'react-router-dom';
+import ConfirmedBooking from './Pages/ConfirmBooking';
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 				<Route path='/About' element={<About />} />
 				<Route path='/Menu' element={<Menu />} />
 				<Route path='/Reservations' element={<Reservations />} />
+				<Route path='/ConfirmedBooking' element={<ConfirmedBooking />} />
 				<Route path='/OrderOnline' element={<OrderOnline />} />
 				<Route path='/Login' element={<Login />} />
 				<Route path='/*' element={<NoPage />} />
