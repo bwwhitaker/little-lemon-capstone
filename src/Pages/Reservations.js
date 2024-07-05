@@ -16,8 +16,6 @@ export default function Reservations(props) {
 		setAvailableTime(newTimes);
 	};
 
-	console.log(availableTime);
-
 	const [formData, setFormData] = useState({
 		date: '',
 		time: '',
@@ -98,8 +96,6 @@ export default function Reservations(props) {
 		clearForm();
 		submitForm(e);
 	}
-
-	console.log(formData);
 
 	return (
 		<div className='reservation-form'>

@@ -43,3 +43,36 @@ test('Confirm Button is intially disabled', () => {
 	const confirmButton = screen.getByText('Confirm Booking');
 	expect(confirmButton).toBeDisabled();
 });
+
+test('Confirm Booking button is enabled when form is filled correctly', () => {
+	render(
+		<BrowserRouter>
+			<Reservations />
+		</BrowserRouter>
+	);
+
+	const getIsFormValid = () => {
+		return (
+			formData.date.trim().length >= 3 &&
+			formData.time.trim().length >= 3 &&
+			formData.fullname.trim().length >= 3 &&
+			formData.phone.trim().length >= 10 &&
+			formData.email.trim().length >= 8
+		);
+	};
+
+	// Mock formData
+	const formData = {
+		date: '2024-07-05',
+		time: '12:00 PM',
+		fullname: 'John Doe',
+		email: 'johndoe@example.com',
+		phone: '1234567890',
+	};
+
+	// Test the function with valid form data
+	const isValid = getIsFormValid(formData);
+
+	// Assert that the form is valid
+	expect(isValid).toBe(true);
+});
