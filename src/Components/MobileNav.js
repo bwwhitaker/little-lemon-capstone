@@ -30,28 +30,30 @@ export default function MobileNav() {
 	}, [isMenuOpen]);
 
 	return (
-		<div className='navbar'>
-			<div className='hamburger'>
-				<img src={hamburger} alt='Menu' onClick={toggleMenu} />
-			</div>
-			{isMenuOpen && (
-				<div className='dropdown-menu' ref={menuRef}>
-					<div>
-						<ul className='no-bullets'>
-							{routes.map((route) => {
-								const { href, title } = route;
-								return (
-									<li key={route.title} className=''>
-										<a href={href} className=''>
-											{title}
-										</a>
-									</li>
-								);
-							})}
-						</ul>
-					</div>
+		<nav>
+			<div className='navbar'>
+				<div className='hamburger'>
+					<img src={hamburger} alt='Menu' onClick={toggleMenu} />
 				</div>
-			)}
-		</div>
+				{isMenuOpen && (
+					<div className='dropdown-menu' ref={menuRef}>
+						<div>
+							<ul className='no-bullets'>
+								{routes.map((route) => {
+									const { href, title } = route;
+									return (
+										<li key={route.title} className=''>
+											<a href={href} className=''>
+												{title}
+											</a>
+										</li>
+									);
+								})}
+							</ul>
+						</div>
+					</div>
+				)}
+			</div>
+		</nav>
 	);
 }
