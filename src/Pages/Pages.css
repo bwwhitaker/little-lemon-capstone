@@ -128,9 +128,9 @@ select:focus {
 	cursor: not-allowed;
 }
 
-@media only screen and (max-width: 750px) {
-	.reservation-form {
-		box-shadow: 0 0;
+@media only screen and (max-width: 900px) {
+	form {
+		padding: 0 2rem;
 	}
 }
 

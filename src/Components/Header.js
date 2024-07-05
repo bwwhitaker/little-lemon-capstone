@@ -14,12 +14,14 @@ export default function Header() {
 						<img src={logo} alt='Little Lemon Logo' />
 					</Link>
 				</div>
-				<div className='desktop-nav'>
-					<DesktopNav />
-				</div>
-				<div className='mobile-nav'>
-					<MobileNav />
-				</div>
+				<nav>
+					<div className='desktop-nav'>
+						<DesktopNav />
+					</div>
+					<div className='mobile-nav'>
+						<MobileNav />
+					</div>
+				</nav>
 			</div>
 		</div>
 	);
