@@ -124,7 +124,18 @@ export default function BookingForm(props) {
 				>
 					<option value=''>Select a time</option>
 					{availableTimes.map((time) => {
-						return <option key={time}>{time}</option>;
+						var hour = time.split(':', 1);
+						var minute = time.split(':', 2)[1];
+						if (hour - 12 > 0) {
+							var twelveHourTime = hour - 12;
+							return (
+								<option key={time}>
+									{twelveHourTime}:{minute} pm
+								</option>
+							);
+						} else {
+							return <option key={time}>{time} am</option>;
+						}
 					})}
 				</select>
 				{formData.isTouchedTime && formData.time.trim().length < 3 ? (
