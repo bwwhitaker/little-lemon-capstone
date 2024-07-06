@@ -133,6 +133,12 @@ export default function BookingForm(props) {
 									{twelveHourTime}:{minute} pm
 								</option>
 							);
+						} else if (hour - 12 === 0) {
+							return (
+								<option key={time}>
+									{hour}:{minute} pm
+								</option>
+							);
 						} else {
 							return <option key={time}>{time} am</option>;
 						}
