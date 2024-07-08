@@ -5,7 +5,6 @@ export default function TestimonialCards(props) {
 	return (
 		<div className='review'>
 			<div className='reviews-wrapper'>
-				<img src={props.image} alt='customer' className='client' />
 				<div className='client-detail'>
 					<h5>{props.name}</h5>
 					<span className='stars'>

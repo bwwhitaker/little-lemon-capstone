@@ -8,31 +8,33 @@ import OrderOnline from './Pages/OrderOnline';
 import Login from './Pages/LogIn';
 import Menu from './Pages/Menu';
 import NoPage from './Pages/NoPage';
-import { Routes, Route } from 'react-router-dom';
 import ConfirmedBooking from './Pages/ConfirmBooking';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 	return (
 		<div className='App'>
-			<header>
-				<Header />
-			</header>
-			<main>
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/home' element={<Home />} />
-					<Route path='/About' element={<About />} />
-					<Route path='/Menu' element={<Menu />} />
-					<Route path='/Reservations' element={<Reservations />} />
-					<Route path='/ConfirmedBooking' element={<ConfirmedBooking />} />
-					<Route path='/OrderOnline' element={<OrderOnline />} />
-					<Route path='/Login' element={<Login />} />
-					<Route path='/*' element={<NoPage />} />
-				</Routes>
-			</main>
-			<footer>
-				<Footer />
-			</footer>
+			<Router>
+				<header>
+					<Header />
+				</header>
+				<main>
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/Home' element={<Home />} />
+						<Route path='/About' element={<About />} />
+						<Route path='/Menu' element={<Menu />} />
+						<Route path='/Reservations' element={<Reservations />} />
+						<Route path='/ConfirmedBooking' element={<ConfirmedBooking />} />
+						<Route path='/OrderOnline' element={<OrderOnline />} />
+						<Route path='/Login' element={<Login />} />
+						<Route path='*' element={<NoPage />} />
+					</Routes>
+				</main>
+				<footer>
+					<Footer />
+				</footer>
+			</Router>
 		</div>
 	);
 }

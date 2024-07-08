@@ -1,26 +1,26 @@
 export const routes = [
 	{
 		title: 'Home',
-		href: '/',
+		href: '/little-lemon-capstone/',
 	},
 	{
 		title: 'About',
-		href: '/About',
+		href: '/little-lemon-capstone/#/About',
 	},
 	{
 		title: 'Menu',
-		href: '/Menu',
+		href: '/little-lemon-capstone/#/Menu',
 	},
 	{
 		title: 'Reservations',
-		href: '/Reservations',
+		href: '/little-lemon-capstone/#/Reservations',
 	},
 	{
 		title: 'Order Online',
-		href: '/OrderOnline',
+		href: '/little-lemon-capstone/#/OrderOnline',
 	},
 	{
 		title: 'Login',
-		href: '/Login',
+		href: '/little-lemon-capstone/#/Login',
 	},
 ];
