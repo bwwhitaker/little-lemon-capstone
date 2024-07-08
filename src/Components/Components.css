@@ -205,11 +205,24 @@
 	min-height: 100px;
 }
 
-.item-wrapper button {
+.item-wrapper a {
+	text-decoration: none;
+}
+
+.item-wrapper a button {
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
 	font-weight: 600;
+	color: black;
+	padding: 10px 15px;
+	border-radius: 10px;
+	background: none;
+	cursor: pointer;
+}
+
+.item-wrapper a button:hover {
+	background-color: white;
 }
 
 @media only screen and (max-width: 1200px) {
