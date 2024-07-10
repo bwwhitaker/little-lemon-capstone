@@ -105,6 +105,11 @@ select:focus {
 }
 
 .submitBtn {
+	border: 2px solid #000; /* Default border for all sides */
+	border-top-width: 2px; /* Ensures top border is set */
+	border-left-width: 2px; /* Ensures left border is set */
+	border-style: solid; /* Ensures border style is solid */
+	border-color: #000;
 	align-self: center;
 	border-radius: 10px;
 	margin: 1rem 0;
@@ -125,6 +130,11 @@ select:focus {
 	cursor: pointer;
 }
 .clearBtn {
+	border: 2px solid;
+	border-top-width: 2px;
+	border-left-width: 2px;
+	border-style: solid;
+	border-color: #000;
 	align-self: center;
 	border-radius: 10px;
 	margin: 1rem 0;
@@ -148,6 +158,11 @@ select:focus {
 	background-color: #979292;
 	color: honeydew;
 	cursor: not-allowed;
+	border: 2px solid;
+	border-top-width: 2px;
+	border-left-width: 2px;
+	border-style: solid;
+	border-color: #000;
 }
 
 @media only screen and (max-width: 900px) {
@@ -191,6 +206,11 @@ select:focus {
 }
 
 .confirmation button {
+	border: 1px solid #000; /* Default border for all sides */
+	border-top-width: 1px; /* Ensures top border is set */
+	border-left-width: 1px; /* Ensures left border is set */
+	border-style: solid; /* Ensures border style is solid */
+	border-color: #000;
 	font-size: 18px;
 	font-weight: 600;
 	background-color: #f4ce14;

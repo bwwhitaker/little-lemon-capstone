@@ -210,6 +210,10 @@
 }
 
 .item-wrapper a button {
+	border: 2px solid;
+	border-top-width: 2px;
+	border-left-width: 2px;
+	border-style: solid;
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
