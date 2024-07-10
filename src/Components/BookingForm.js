@@ -27,7 +27,7 @@ export default function BookingForm(props) {
 
 	// console.log(formData)
 
-	const [numOfGuests, setNumOfGuets] = useState(1);
+	var [numOfGuests, setNumOfGuests] = useState(1);
 
 	// todays date;
 	var today = new Date();
@@ -64,6 +64,11 @@ export default function BookingForm(props) {
 				isTouchedEmail: false,
 			};
 		});
+	}
+
+	function resetBookingPage() {
+		clearForm();
+		setNumOfGuests(1);
 	}
 
 	function handleChange(e) {
@@ -150,11 +155,9 @@ export default function BookingForm(props) {
 				<div className='num-of-guests'>
 					<label>Number of Guests</label>
 					<div className='num'>
-						<span onClick={() => (numOfGuests < 10 ? setNumOfGuets(numOfGuests + 1) : null)}>+</span>
-
+						<span onClick={() => (numOfGuests < 10 ? setNumOfGuests(numOfGuests + 1) : null)}>+</span>
 						<h5>{numOfGuests}</h5>
-
-						<span onClick={() => (numOfGuests > 1 ? setNumOfGuets(numOfGuests - 1) : null)}>-</span>
+						<span onClick={() => (numOfGuests > 1 ? setNumOfGuests(numOfGuests - 1) : null)}>-</span>
 					</div>
 				</div>
 				<textarea
@@ -214,8 +217,8 @@ export default function BookingForm(props) {
 				<button aria-label='On Click' type='submit' className='submitBtn' disabled={!getIsFormValid()}>
 					Confirm Booking
 				</button>
-				<button aria-label='On Click' type='reset' className='clearBtn' onClick={clearForm}>
-					Clear Form
+				<button aria-label='On Click' type='reset' className='clearBtn' onClick={resetBookingPage}>
+					Reset Form
 				</button>
 			</form>
 		</div>

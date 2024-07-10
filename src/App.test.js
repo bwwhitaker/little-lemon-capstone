@@ -1,7 +1,9 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor, cleanup } from '@testing-library/react';
 import Reservations from './Pages/Reservations';
 import { BrowserRouter } from 'react-router-dom';
 import { fireEvent } from '@testing-library/react';
+
+afterEach(cleanup);
 
 test('Renders the BookingForm heading', () => {
 	render(

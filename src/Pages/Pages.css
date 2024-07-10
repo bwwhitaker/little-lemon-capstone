@@ -113,6 +113,17 @@ select:focus {
 	font-size: 18px;
 	font-weight: 600;
 }
+
+.submitBtn:hover {
+	align-self: center;
+	border-radius: 10px;
+	margin: 1rem 0;
+	padding: 0.5rem 1rem;
+	background-color: white;
+	font-size: 18px;
+	font-weight: 600;
+	cursor: pointer;
+}
 .clearBtn {
 	align-self: center;
 	border-radius: 10px;
@@ -121,6 +132,17 @@ select:focus {
 	background-color: #ee9972;
 	font-size: 18px;
 	font-weight: 600;
+}
+
+.clearBtn:hover {
+	align-self: center;
+	border-radius: 10px;
+	margin: 1rem 0;
+	padding: 0.5rem 1rem;
+	background-color: white;
+	font-size: 18px;
+	font-weight: 600;
+	cursor: pointer;
 }
 .submitBtn[disabled] {
 	background-color: #979292;
@@ -179,8 +201,7 @@ select:focus {
 
 .confirmation button:hover {
 	background-color: white;
-	outline: 2px solid #495e57;
-	color: #495e57;
+	cursor: pointer;
 }
 
 @media only screen and (max-width: 1000px) {

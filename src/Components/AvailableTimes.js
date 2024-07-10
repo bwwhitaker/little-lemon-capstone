@@ -17,13 +17,15 @@ const AvailableTimes = ({ onTimesGenerated }) => {
 	useEffect(() => {
 		if (!hasGeneratedTimes.current) {
 			const generateTimes = () => {
-				const newTimes = [];
+				const newTimesSet = new Set();
 				const numberOfOptions = [3, 4, 5, 6, 7, 8, 9, 10];
 				const availableOptions = numberOfOptions[Math.floor(Math.random() * numberOfOptions.length)];
-				for (let i = 0; i < availableOptions; i++) {
-					newTimes.push(generateRandomTime());
+				while (newTimesSet.size < availableOptions) {
+					newTimesSet.add(generateRandomTime());
 				}
-				onTimesGenerated(newTimes.sort());
+
+				const newTimes = Array.from(newTimesSet).sort();
+				onTimesGenerated(newTimes);
 			};
 
 			generateTimes();
