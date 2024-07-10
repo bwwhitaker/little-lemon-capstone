@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/little-lemon-capstone/static/css/main.7ee58d09.css",
+    "main.css": "/little-lemon-capstone/static/css/main.80bcd635.css",
     "main.js": "/little-lemon-capstone/static/js/main.2b6c7a39.js",
     "static/js/453.79428faa.chunk.js": "/little-lemon-capstone/static/js/453.79428faa.chunk.js",
     "static/media/restaurant chef B.jpg": "/little-lemon-capstone/static/media/restaurant chef B.4b4c2d26b514db32e8fc.jpg",
@@ -13,12 +13,12 @@
     "static/media/star.png": "/little-lemon-capstone/static/media/star.07f560db0ee62644ca6b.png",
     "index.html": "/little-lemon-capstone/index.html",
     "static/media/🦆 icon _hamburger menu.svg": "/little-lemon-capstone/static/media/🦆 icon _hamburger menu.0da6f67ced800ab909f63d5144de37ee.svg",
-    "main.7ee58d09.css.map": "/little-lemon-capstone/static/css/main.7ee58d09.css.map",
+    "main.80bcd635.css.map": "/little-lemon-capstone/static/css/main.80bcd635.css.map",
     "main.2b6c7a39.js.map": "/little-lemon-capstone/static/js/main.2b6c7a39.js.map",
     "453.79428faa.chunk.js.map": "/little-lemon-capstone/static/js/453.79428faa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ee58d09.css",
+    "static/css/main.80bcd635.css",
     "static/js/main.2b6c7a39.js"
   ]
 }
