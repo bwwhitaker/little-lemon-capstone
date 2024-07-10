@@ -206,11 +206,10 @@ select:focus {
 }
 
 .confirmation button {
-	border: 1px solid #000; /* Default border for all sides */
-	border-top-width: 1px; /* Ensures top border is set */
-	border-left-width: 1px; /* Ensures left border is set */
-	border-style: solid; /* Ensures border style is solid */
-	border-color: #000;
+	border: 2px solid;
+	border-top-width: 2px;
+	border-left-width: 2px;
+	border-style: solid;
 	font-size: 18px;
 	font-weight: 600;
 	background-color: #f4ce14;
